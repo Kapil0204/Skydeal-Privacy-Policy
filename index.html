@@ -144,6 +144,21 @@
 .site-header .nav {
   column-gap: 18px;              /* reduce link-to-link gap */
 }
+    /* ===== Mobile-only spacing refinements ===== */
+@media (max-width: 640px) {
+  /* 1) More space after the SkyDeal logo before the nav */
+  .brand { margin-right: 28px; }   /* push nav away from logo */
+
+  /* 2) Keep both lines of the headline offset equally from the left edge */
+  .hero h1 {
+    margin-left: 6px;              /* tiny uniform left offset */
+    text-indent: 0;                /* ensure no first-line-only indent */
+  }
+
+  /* 3) Tighter spacing between About / Privacy / Contact */
+  .topnav { gap: 14px; }           /* reduce inter-link gap */
+}
+
   </style>
 </head>
 <body>
