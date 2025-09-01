@@ -2,66 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — SkyDeal</title>
-  <meta name="description" content="Get in touch with SkyDeal." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Get in touch with SkyDeal. Email us for support, feedback, or partnership inquiries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-1:#060a17;--bg-2:#0b1428;--panel:#0e1a33;--ink:#e7ecf6;--muted:#b8c3da;--line:rgba(255,255,255,.12);--brand1:#60a5fa;--brand2:#22c55e;--brand3:#a78bfa;--accent:#f59e0b;--radius:16px;--maxw:800px}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+      background:radial-gradient(900px 380px at 15% -10%, rgba(96,165,250,.20), transparent 60%),
+                 radial-gradient(900px 380px at 85% 0%,  rgba(34,197,94,.16), transparent 60%),
+                 linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);}
+    a{color:#9cc8ff;text-decoration:none} a:hover{color:#fff;text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+    .site-header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px);background:rgba(6,10,23,.55)}
+    .header__inner{height:86px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+    .brand__logo{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 120deg,var(--brand1),var(--brand2),var(--brand3),var(--brand1));box-shadow:0 0 30px rgba(96,165,250,.5);border:1px solid rgba(255,255,255,.18)}
+    .brand__text{font-weight:800;letter-spacing:.2px;font-size:28px}
+    .nav{display:flex;gap:18px} .nav a{color:var(--muted);padding:10px 12px;border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
+    .hero__inner{padding:64px 0 24px}
+    .title{margin:0 0 10px;font-size:clamp(28px,4.6vw,42px);font-weight:800}
+    .subtitle{margin:0;color:var(--muted)}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    .row{display:grid;gap:16px} @media(min-width:760px){.row{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#0a152d;font-weight:800;border:none;border-radius:12px;padding:10px 14px;cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .muted{color:var(--muted)}
+    .site-footer{border-top:1px solid var(--line);background:rgba(255,255,255,.02)}
+    .footer__inner{display:grid;grid-template-columns:1fr auto auto;gap:16px;padding:24px 0;align-items:center}
+    .footer__links{display:flex;gap:16px} .footer__links a{color:var(--muted)} .footer__links a:hover{color:#fff;text-decoration:none}
+    .footer__copy{color:var(--muted);font-size:14px}
+    input,textarea{width:100%;background:#0b1730;border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:12px}
+    label{display:block;margin:8px 0 6px}
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">SkyDeal</a>
-      <nav class="menu">
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
+    <div class="container header__inner">
+      <a class="brand" href="index.html"><span class="brand__logo"></span><span class="brand__text">SkyDeal</span></a>
+      <nav class="nav"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-head">
-      <div class="container">
-        <h1>Contact</h1>
-        <p class="muted">We’d love to hear from you.</p>
-      </div>
+  <main class="container">
+    <section class="hero__inner">
+      <h1 class="title">Contact</h1>
+      <p class="subtitle">We’d love to hear from you. For the fastest response, email us.</p>
     </section>
 
-    <section class="container content">
-      <div class="card">
+    <section class="row">
+      <article class="panel">
         <h3>Email</h3>
-        <p>
-          <a class="btn" href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a>
-        </p>
-        <p class="muted small">
-          Typical response within 1–2 business days.
-        </p>
-      </div>
+        <p class="muted">General &amp; support</p>
+        <p><a href="mailto:contact@skydeal.co.in" class="btn">contact@skydeal.co.in</a></p>
+        <p class="muted">We typically reply within 1–2 business days.</p>
+      </article>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Media & partnerships</h3>
-          <p>Write to us with “Partnership” in the subject line.</p>
-        </div>
-        <div class="card">
-          <h3>Responsible disclosure</h3>
-          <p>If you find a security issue, please email us privately. We’ll acknowledge and fix promptly.</p>
-        </div>
-      </div>
+      <article class="panel">
+        <h3>Quick note</h3>
+        <form onsubmit="mailtoCompose(event)">
+          <label for="sub">Subject</label>
+          <input id="sub" type="text" placeholder="Feedback on SkyDeal" />
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="5" placeholder="Write your message…"></textarea>
+          <div style="margin-top:12px"><button class="btn" type="submit">Open email draft</button></div>
+          <p class="muted" style="margin-top:8px">Opens your default mail app with a pre-filled draft to <em>contact@skydeal.co.in</em>.</p>
+        </form>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container foot">
-      <div>© <span id="year"></span> SkyDeal • Hoot Enterprises</div>
-      <nav class="menu small">
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
+    <div class="container footer__inner">
+      <strong>SkyDeal</strong>
+      <div class="footer__links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer__copy">© <span id="y"></span> SkyDeal. All rights reserved.</div>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    function mailtoCompose(e){
+      e.preventDefault();
+      const s=encodeURIComponent(document.getElementById('sub').value||'Feedback on SkyDeal');
+      const b=encodeURIComponent(document.getElementById('msg').value||'');
+      window.location.href=`mailto:contact@skydeal.co.in?subject=${s}&body=${b}`;
+    }
+  </script>
 </body>
 </html>
