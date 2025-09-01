@@ -1,22 +1,64 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SkyDeal</title>
-<style>
-  body{font:16px/1.5 system-ui,Arial,sans-serif;max-width:760px;margin:42px auto;padding:0 16px;color:#0f172a}
-  h1{font-size:28px;margin:0 0 8px}
-  .muted{opacity:.8}
-  a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
-  .links a{margin-right:12px}
-  .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-top:18px}
-</style>
-</head><body>
-  <h1>SkyDeal</h1>
-  <p class="muted">Estimate the <b>actual checkout price</b> on Indian OTAs by applying bank/UPI/wallet offers to live fares.</p>
-  <div class="links">
-    <a href="/about">About</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <div class="card muted">Booking isn’t available on this site. We’re currently testing our app privately.</div>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyDeal — Smarter final prices on Indian OTAs</title>
+  <meta name="description" content="SkyDeal estimates the actual checkout price on Indian OTAs by applying bank/UPI/wallet offers to live fares." />
+  <meta name="theme-color" content="#0f172a">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">SkyDeal</a>
+      <nav class="menu">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Estimate the <span class="highlight">actual checkout price</span> on Indian OTAs</h1>
+        <p class="lede">
+          We apply bank / UPI / wallet offers to live fares so you see the
+          price you’d really pay at checkout—before you click out.
+        </p>
+
+        <div class="cta-row">
+          <span class="badge beta">Private beta</span>
+          <button class="btn btn-disabled" aria-disabled="true" title="Private beta">Booking not available here</button>
+          <p class="hint">We’re testing privately. Reach out if you’d like early access.</p>
+        </div>
+
+        <div class="hero-card">
+          <ul class="bullets">
+            <li>Real offers mapped to supported payment methods</li>
+            <li>Transparent final-price math, not “from” fares</li>
+            <li>No ticketing here — we’re an estimator, not an OTA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <div>© <span id="year"></span> SkyDeal • Hoot Enterprises</div>
+      <nav class="menu small">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
