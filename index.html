@@ -2,40 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SkyDeal — Best travel offers by your payment methods</title>
   <meta name="description" content="SkyDeal compares real checkout prices across Indian OTAs by applying bank/UPI/wallet offers to live fares—matched to the payment methods you can actually use." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-1:#060a17; --bg-2:#0b1428; --panel:#0e1a33;
+      --ink:#e7ecf6; --muted:#b8c3da; --line:rgba(255,255,255,.12);
+      --brand1:#60a5fa; --brand2:#22c55e; --brand3:#a78bfa; --accent:#f59e0b;
+      --radius:16px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 380px at 15% -10%, rgba(96,165,250,.20), transparent 60%),
+        radial-gradient(900px 380px at 85% 0%,  rgba(34,197,94,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    }
+    a{ color:#9cc8ff; text-decoration:none }
+    a:hover{ color:#fff; text-decoration:underline }
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+    /* Header */
+    .site-header{
+      position:sticky; top:0; z-index:10;
+      border-bottom:1px solid var(--line);
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(6,10,23,.55);
+    }
+    .header__inner{height:86px; display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:14px}
+    .brand,.brand:visited{color:#fff; text-decoration:none}
+    .brand__logo{
+      width:56px; height:56px; border-radius:50%;
+      display:grid; place-items:center;
+      background: conic-gradient(from 120deg, var(--brand1), var(--brand2), var(--brand3), var(--brand1));
+      box-shadow: 0 0 30px rgba(96,165,250,.5);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .brand__text{font-weight:800; letter-spacing:.2px; font-size:28px}
+    .nav{display:flex; gap:18px}
+    .nav a{color:var(--muted); padding:10px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.08); color:#fff; text-decoration:none}
+
+    /* Hero */
+    .hero{position:relative; overflow:hidden}
+    .hero__bg{position:absolute; inset:0; pointer-events:none; opacity:.45;
+      background:
+        radial-gradient(700px 250px at 15% 10%, rgba(96,165,250,.30), transparent 60%),
+        radial-gradient(650px 250px at 85% 10%, rgba(167,139,250,.25), transparent 60%);
+    }
+    .hero__inner{position:relative; padding:70px 0 80px}
+    .hero__title{margin:0 0 14px; line-height:1.12}
+    .t-gradient{
+      display:block; font-weight:800; font-size: clamp(30px, 5.2vw, 52px);
+      background-image: linear-gradient(90deg, var(--brand1), var(--brand2), var(--brand3));
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color: transparent;
+    }
+    .hero__subtitle{display:block; font-size: clamp(18px,2.2vw,22px); color:var(--ink); opacity:.9}
+
+    /* Beta box */
+    .beta-box{
+      margin:26px 0 30px; padding:22px 22px; border-radius:18px;
+      background: linear-gradient(180deg, #0a1326, #0b1730);
+      border:1px solid rgba(245,158,11,.55);
+      box-shadow: 0 10px 36px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.035);
+      font-size:18px;
+    }
+    .beta__chip{
+      display:inline-block; font-weight:800; color:#1b1200;
+      background:var(--accent); padding:6px 12px; border-radius:999px;
+      text-transform:uppercase; letter-spacing:.45px; font-size:12px; margin-bottom:10px;
+    }
+    .beta__text{margin:0; color:#f7f7fb; font-weight:600}
+
+    /* What we're building */
+    .build__title{margin:8px 0 14px; font-size: clamp(20px, 2.2vw, 24px); font-weight:800; color:#e9eefc}
+
+    .steps{list-style:none; padding:0; margin:0; display:grid; gap:14px; counter-reset: step}
+    .step{
+      display:grid; grid-template-columns: 48px 1fr; gap:14px; align-items:flex-start;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line); border-radius:16px; padding:16px 16px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      position:relative;
+    }
+    .step::before{
+      counter-increment: step; content: counter(step);
+      width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+      font-weight:900; font-size:18px; color:#0a152d;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      box-shadow: 0 6px 18px rgba(34,197,94,.35);
+    }
+    .step__head{font-weight:800; margin-bottom:4px}
+    .step p{margin:0; color:var(--muted)}
+
+    /* Contact note */
+    .contact-note{margin:26px 0 0; color:var(--muted)}
+    .contact-note a{border-bottom:1px dashed rgba(156,200,255,.4)}
+    .contact-note a:hover{border-bottom-color:#fff}
+
+    /* Footer */
+    .site-footer{border-top:1px solid var(--line); background: rgba(255,255,255,.02)}
+    .footer__inner{display:grid; grid-template-columns:1fr auto auto; gap:16px; padding:24px 0; align-items:center}
+    .footer__links{display:flex; gap:16px}
+    .footer__links a{color:var(--muted)}
+    .footer__links a:hover{color:#fff; text-decoration:none}
+    .footer__copy{color:var(--muted); font-size:14px}
+    .footer__brand{display:flex; align-items:center; gap:10px}
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header__inner">
       <a class="brand" href="/">
-        <span class="brand__logo" aria-hidden="true">
-          <!-- minimal mark -->
-          <svg viewBox="0 0 36 36" width="34" height="34" fill="none" role="img">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#60a5fa"/>
-                <stop offset="0.5" stop-color="#22c55e"/>
-                <stop offset="1" stop-color="#a78bfa"/>
-              </linearGradient>
-            </defs>
-            <circle cx="18" cy="18" r="16" stroke="url(#g)" stroke-width="2" />
-            <path d="M8 19l20-6-6 20-3.6-8-10.4-6z" fill="url(#g)" opacity=".95"/>
-          </svg>
-        </span>
+        <span class="brand__logo" aria-hidden="true"></span>
         <span class="brand__text">SkyDeal</span>
       </a>
-
       <nav class="nav">
-        <a href="about.html"   class="nav__link">About</a>
-        <a href="privacy.html" class="nav__link">Privacy</a>
-        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -49,7 +144,6 @@
         <span class="hero__subtitle">automatically matched to <strong>your payment methods</strong></span>
       </h1>
 
-      <!-- Beta box: dark, high-contrast -->
       <aside class="beta-box" role="status" aria-live="polite">
         <div class="beta__chip">Private Beta</div>
         <p class="beta__text">
@@ -58,39 +152,34 @@
         </p>
       </aside>
 
-      <!-- What we’re building (numbered bullets) -->
       <section class="build">
         <h2 class="build__title">What we’re building</h2>
-        <ol class="steps">
+        <ul class="steps">
           <li class="step">
-            <div class="step__num">1</div>
             <div class="step__body">
               <div class="step__head">True checkout prices</div>
               <p>We apply <strong>real bank/UPI/wallet offers</strong> (with caps &amp; terms) to live fares so you see what you’ll actually pay.</p>
             </div>
           </li>
           <li class="step">
-            <div class="step__num">2</div>
             <div class="step__body">
               <div class="step__head">Payment-method first</div>
               <p>Pick cards, UPI, wallets or EMI you really use—SkyDeal surfaces the OTA that’s best <em>for you</em>.</p>
             </div>
           </li>
           <li class="step">
-            <div class="step__num">3</div>
             <div class="step__body">
               <div class="step__head">Transparent math</div>
               <p>Every rupee explained. No mystery discounts or surprise fees at checkout.</p>
             </div>
           </li>
           <li class="step">
-            <div class="step__num">4</div>
             <div class="step__body">
               <div class="step__head">India-first coverage</div>
               <p>Focused on Indian OTAs, banks and tender types. Offers kept current and auditable.</p>
             </div>
           </li>
-        </ol>
+        </ul>
       </section>
 
       <p class="contact-note">
@@ -102,10 +191,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="brand__logo brand__logo--sm" aria-hidden="true"></span>
-        <strong>SkyDeal</strong>
-      </div>
+      <div class="footer__brand"><strong>SkyDeal</strong></div>
       <div class="footer__links">
         <a href="about.html">About</a>
         <a href="privacy.html">Privacy</a>
@@ -115,8 +201,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
