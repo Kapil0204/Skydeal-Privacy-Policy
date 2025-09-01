@@ -124,6 +124,26 @@
     padding-inline-start: 30px; /* was 22px; tweak 28–34px if you want more/less */
   }
 }
+    /* --- Mobile: nudge the big headline/tagline off the left edge --- */
+@media (max-width: 540px) {
+  .hero h1 {
+    text-indent: 8px;           /* first line only */
+  }
+  .hero p {                      /* the short subline under the H1 */
+    padding-inline-start: 8px;   /* keeps it aligned with the H1 */
+  }
+}
+
+/* --- Header spacing (all screens) --- */
+/* More gap between logo block and the page links */
+.site-header .header-inner { 
+  column-gap: 28px;              /* was larger/smaller before; this adds breathing room */
+}
+
+/* Tighter spacing between the page links themselves */
+.site-header .nav {
+  column-gap: 14px;              /* reduce link-to-link gap */
+}
   </style>
 </head>
 <body>
