@@ -117,6 +117,13 @@
     .footer__links a:hover{color:#fff; text-decoration:none}
     .footer__copy{color:var(--muted); font-size:14px}
     .footer__brand{display:flex; align-items:center; gap:10px}
+    /* Mobile-only: add a little extra left space on the homepage */
+@media (max-width: 540px) {
+  /* The :has(.badge) makes this apply only to the homepage (which has the beta badge) */
+  body:has(.badge) .container {
+    padding-inline-start: 30px; /* was 22px; tweak 28–34px if you want more/less */
+  }
+}
   </style>
 </head>
 <body>
