@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SkyDeal — Find best offers across travel portals by payment method</title>
-  <meta name="description" content="SkyDeal compares real checkout prices across Indian OTAs by applying bank/UPI/wallet offers to live fares—based on the payment methods you can use." />
+  <title>SkyDeal — Best travel offers by your payment methods</title>
+  <meta name="description" content="SkyDeal compares real checkout prices across Indian OTAs by applying bank/UPI/wallet offers to live fares—matched to the payment methods you can actually use." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,21 +16,22 @@
     <div class="container header__inner">
       <a class="brand" href="/">
         <span class="brand__logo" aria-hidden="true">
-          <!-- tiny plane + dot logo -->
-          <svg viewBox="0 0 28 28" width="24" height="24" fill="none" role="img">
+          <!-- minimal mark -->
+          <svg viewBox="0 0 36 36" width="34" height="34" fill="none" role="img">
             <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <linearGradient id="g" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#60a5fa"/>
                 <stop offset="0.5" stop-color="#22c55e"/>
                 <stop offset="1" stop-color="#a78bfa"/>
               </linearGradient>
             </defs>
-            <circle cx="14" cy="14" r="13" stroke="url(#g)" stroke-width="2" />
-            <path d="M6 15l16-5-5 16-3-7-8-4z" fill="url(#g)" opacity=".9"/>
+            <circle cx="18" cy="18" r="16" stroke="url(#g)" stroke-width="2" />
+            <path d="M8 19l20-6-6 20-3.6-8-10.4-6z" fill="url(#g)" opacity=".95"/>
           </svg>
         </span>
         <span class="brand__text">SkyDeal</span>
       </a>
+
       <nav class="nav">
         <a href="about.html"   class="nav__link">About</a>
         <a href="privacy.html" class="nav__link">Privacy</a>
@@ -45,44 +46,55 @@
     <div class="container hero__inner">
       <h1 class="hero__title">
         <span class="t-gradient">Find the best offers across travel portals</span>
-        <span class="hero__subtitle">according to your payment methods</span>
+        <span class="hero__subtitle">automatically matched to <strong>your payment methods</strong></span>
       </h1>
 
-      <!-- Big beta box -->
-      <div class="announcement" role="status" aria-live="polite">
-        <div class="announcement__label">Private Beta</div>
-        <div class="announcement__text">
-          We’re still building SkyDeal. <strong>Search & booking aren’t enabled</strong> on this site yet.
-          This is a limited preview while we validate the experience.
-        </div>
-      </div>
+      <!-- Beta box: dark, high-contrast -->
+      <aside class="beta-box" role="status" aria-live="polite">
+        <div class="beta__chip">Private Beta</div>
+        <p class="beta__text">
+          We’re still building SkyDeal. <strong>Search and booking are not enabled</strong> on this site yet.
+          This is a limited preview while we test privately.
+        </p>
+      </aside>
 
-      <!-- Value props / checklist -->
-      <div class="grid">
-        <div class="card">
-          <div class="check">✓</div>
-          <div class="card__title">Real checkout prices</div>
-          <p class="card__text">We apply <strong>actual bank / UPI / wallet offers</strong> and caps to live fares to show what you’ll really pay.</p>
-        </div>
-        <div class="card">
-          <div class="check">✓</div>
-          <div class="card__title">Payment-method first</div>
-          <p class="card__text">Filter by cards, UPI, wallets or EMI you actually have—see which OTA is best <em>for you</em>.</p>
-        </div>
-        <div class="card">
-          <div class="check">✓</div>
-          <div class="card__title">Transparent breakdown</div>
-          <p class="card__text">Offer math you can audit. No mystery fees, no surprises at checkout.</p>
-        </div>
-        <div class="card">
-          <div class="check">✓</div>
-          <div class="card__title">India-focused</div>
-          <p class="card__text">Built for Indian OTAs, banks and tenders—kept current with live offer terms.</p>
-        </div>
-      </div>
+      <!-- What we’re building (numbered bullets) -->
+      <section class="build">
+        <h2 class="build__title">What we’re building</h2>
+        <ol class="steps">
+          <li class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <div class="step__head">True checkout prices</div>
+              <p>We apply <strong>real bank/UPI/wallet offers</strong> (with caps &amp; terms) to live fares so you see what you’ll actually pay.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <div class="step__head">Payment-method first</div>
+              <p>Pick cards, UPI, wallets or EMI you really use—SkyDeal surfaces the OTA that’s best <em>for you</em>.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <div class="step__head">Transparent math</div>
+              <p>Every rupee explained. No mystery discounts or surprise fees at checkout.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">4</div>
+            <div class="step__body">
+              <div class="step__head">India-first coverage</div>
+              <p>Focused on Indian OTAs, banks and tender types. Offers kept current and auditable.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
 
       <p class="contact-note">
-        Have feedback or want early access? <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a>
+        Want early access or have feedback? <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a>
       </p>
     </div>
   </section>
