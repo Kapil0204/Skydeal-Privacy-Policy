@@ -2,109 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — SkyDeal</title>
-  <meta name="description" content="What we collect, how we use it, and your choices." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy — SkyDeal</title>
+  <meta name="description" content="SkyDeal privacy: what we collect, how we use it, cookies, retention, third parties, and your choices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-1:#060a17;--bg-2:#0b1428;--panel:#0e1a33;--ink:#e7ecf6;--muted:#b8c3da;--line:rgba(255,255,255,.12);--brand1:#60a5fa;--brand2:#22c55e;--brand3:#a78bfa;--accent:#f59e0b;--radius:16px;--maxw:900px}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+      background:radial-gradient(900px 380px at 15% -10%, rgba(96,165,250,.20), transparent 60%),
+                 radial-gradient(900px 380px at 85% 0%,  rgba(34,197,94,.16), transparent 60%),
+                 linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);}
+    a{color:#9cc8ff;text-decoration:none} a:hover{color:#fff;text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+    .site-header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px);background:rgba(6,10,23,.55)}
+    .header__inner{height:86px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+    .brand__logo{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 120deg,var(--brand1),var(--brand2),var(--brand3),var(--brand1));box-shadow:0 0 30px rgba(96,165,250,.5);border:1px solid rgba(255,255,255,.18)}
+    .brand__text{font-weight:800;letter-spacing:.2px;font-size:28px}
+    .nav{display:flex;gap:18px} .nav a{color:var(--muted);padding:10px 12px;border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
+    .hero__inner{padding:64px 0 24px}
+    .title{margin:0 0 10px;font-size:clamp(28px,4.6vw,42px);font-weight:800}
+    .meta{color:var(--muted);margin:0 0 16px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:20px;margin:14px 0;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    .card h3{margin:0 0 8px;font-size:20px}
+    .card p,.card li{color:var(--muted)} .card ul{margin:8px 0 0 18px}
+    .site-footer{border-top:1px solid var(--line);background:rgba(255,255,255,.02)}
+    .footer__inner{display:grid;grid-template-columns:1fr auto auto;gap:16px;padding:24px 0;align-items:center}
+    .footer__links{display:flex;gap:16px} .footer__links a{color:var(--muted)} .footer__links a:hover{color:#fff;text-decoration:none}
+    .footer__copy{color:var(--muted);font-size:14px}
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">SkyDeal</a>
-      <nav class="menu">
-        <a href="about.html">About</a>
-        <a class="active" href="privacy.html">Privacy</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container header__inner">
+      <a class="brand" href="index.html"><span class="brand__logo"></span><span class="brand__text">SkyDeal</span></a>
+      <nav class="nav"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-head">
-      <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="muted">Last updated: 26 Aug 2025</p>
-      </div>
+  <main class="container">
+    <section class="hero__inner">
+      <h1 class="title">Privacy</h1>
+      <p class="meta">Last updated: <span id="d"></span></p>
     </section>
 
-    <section class="container content">
-      <div class="card">
-        <p><b>SkyDeal</b> (“we”, “us”) estimates final prices by applying public payment offers to live fares. We do not sell tickets or process payments on this site.</p>
-        <p class="muted small"><b>Entity</b>: Hoot Enterprises • Email: <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a></p>
-      </div>
-
-      <h2>What this covers</h2>
-      <p>Applies to skydeal.co.in and subdomains we operate.</p>
-
-      <h2>Information we collect</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Provided by you</h3>
-          <ul>
-            <li>Search inputs: origin, destination, dates, cabin, pax, payment method</li>
-            <li>Emails sent to us (address, content)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Collected automatically</h3>
-          <ul>
-            <li>Standard web logs for security (IP, user agent, timestamps)</li>
-            <li>Performance diagnostics</li>
-          </ul>
-        </div>
-      </div>
-
-      <h2>How we use information</h2>
-      <table class="table">
-        <thead><tr><th>Purpose</th><th>Examples</th><th>Basis</th></tr></thead>
-        <tbody>
-          <tr><td>Provide & improve</td><td>Run calculations; fix bugs</td><td>Legitimate interests / Contract</td></tr>
-          <tr><td>Communicate</td><td>Reply to your emails</td><td>Consent / Legitimate interests</td></tr>
-          <tr><td>Security</td><td>Prevent abuse; troubleshoot</td><td>Legitimate interests / Legal obligation</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Cookies & analytics</h2>
-      <p>We aim to run with minimal cookies. If we enable analytics later, we’ll update this page and use privacy-respecting methods.</p>
-
-      <h2>Sharing</h2>
+    <article class="card">
+      <h3>What we collect</h3>
       <ul>
-        <li><b>Vercel & backend hosts</b>: to serve the site/APIs</li>
-        <li><b>Flight content providers</b>: we send only search parameters</li>
-        <li><b>Legal</b>: when required to comply with law</li>
+        <li>Basic analytics (pages viewed, device/browser, rough geography).</li>
+        <li>Search inputs you choose to provide (e.g., routes, dates, passenger count).</li>
+        <li>Payment-method preferences (to simulate offers) when you select them.</li>
       </ul>
+    </article>
 
-      <h2>Retention</h2>
-      <p>We keep data only as long as needed, then delete or anonymize it.</p>
-
-      <h2>Your choices</h2>
+    <article class="card">
+      <h3>How we use it</h3>
       <ul>
-        <li>Email <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a> for access or deletion requests</li>
-        <li>Control cookies via your browser</li>
+        <li>To compute and explain <em>true</em> checkout prices across OTAs.</li>
+        <li>To improve accuracy, performance and user experience.</li>
       </ul>
+    </article>
 
-      <h2>Children</h2>
-      <p>Not directed to children under 16. If you believe a child provided info, contact us and we’ll delete it.</p>
+    <article class="card">
+      <h3>Cookies &amp; storage</h3>
+      <ul>
+        <li>Essential cookies for session and security.</li>
+        <li>Local storage to remember your payment-method filters (optional).</li>
+      </ul>
+    </article>
 
-      <h2>International users</h2>
-      <p>Data may be processed outside your country with appropriate safeguards.</p>
+    <article class="card">
+      <h3>Data retention</h3>
+      <p>We keep analytics data for a limited time, sufficient for product improvement, then aggregate or delete it.</p>
+    </article>
 
-      <h2>Changes</h2>
-      <p>We’ll revise the “Last updated” date for changes; material changes will be highlighted.</p>
-    </section>
+    <article class="card">
+      <h3>Third parties</h3>
+      <p>We may use providers for hosting, analytics and error tracking. They process data on our behalf per their terms.</p>
+    </article>
+
+    <article class="card">
+      <h3>Your choices</h3>
+      <ul>
+        <li>You can clear local storage and cookies in your browser.</li>
+        <li>Contact us to request deletion of incidental personal data we may have stored.</li>
+      </ul>
+      <p>Questions? <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a></p>
+    </article>
   </main>
 
   <footer class="site-footer">
-    <div class="container foot">
-      <div>© <span id="year"></span> SkyDeal • Hoot Enterprises</div>
-      <nav class="menu small">
-        <a href="about.html">About</a>
-        <a class="active" href="privacy.html">Privacy</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container footer__inner">
+      <strong>SkyDeal</strong>
+      <div class="footer__links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer__copy">© <span id="y"></span> SkyDeal. All rights reserved.</div>
     </div>
   </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    const now=new Date();document.getElementById('y').textContent=now.getFullYear();
+    document.getElementById('d').textContent=now.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'2-digit'});
+  </script>
 </body>
 </html>
