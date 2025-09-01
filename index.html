@@ -3,36 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SkyDeal — Real price comparison with payment-method offers</title>
-  <meta name="description" content="SkyDeal shows real checkout prices on Indian OTAs by applying bank/UPI/wallet offers to live fares—organized by your payment method." />
+  <title>SkyDeal — Find best offers across travel portals by payment method</title>
+  <meta name="description" content="SkyDeal compares real checkout prices across Indian OTAs by applying bank/UPI/wallet offers to live fares—based on the payment methods you can use." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Site-wide announcement -->
-  <div class="notice" role="status" aria-live="polite">
-    <div class="container notice__inner">
-      <div class="notice__text">
-        <span class="badge">Beta</span>
-        We’re still building SkyDeal. Booking isn’t enabled yet—this is a private test.
-      </div>
-      <button class="notice__close" aria-label="Dismiss">×</button>
-    </div>
-  </div>
-
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header__inner">
       <a class="brand" href="/">
-        <span class="brand__dot"></span>
-        SkyDeal
+        <span class="brand__logo" aria-hidden="true">
+          <!-- tiny plane + dot logo -->
+          <svg viewBox="0 0 28 28" width="24" height="24" fill="none" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#60a5fa"/>
+                <stop offset="0.5" stop-color="#22c55e"/>
+                <stop offset="1" stop-color="#a78bfa"/>
+              </linearGradient>
+            </defs>
+            <circle cx="14" cy="14" r="13" stroke="url(#g)" stroke-width="2" />
+            <path d="M6 15l16-5-5 16-3-7-8-4z" fill="url(#g)" opacity=".9"/>
+          </svg>
+        </span>
+        <span class="brand__text">SkyDeal</span>
       </a>
       <nav class="nav">
-        <a href="/about.html"   class="nav__link">About</a>
-        <a href="/privacy.html" class="nav__link">Privacy</a>
-        <a href="/contact.html" class="nav__link">Contact</a>
+        <a href="about.html"   class="nav__link">About</a>
+        <a href="privacy.html" class="nav__link">Privacy</a>
+        <a href="contact.html" class="nav__link">Contact</a>
       </nav>
     </div>
   </header>
@@ -41,31 +43,47 @@
   <section class="hero">
     <div class="hero__bg"></div>
     <div class="container hero__inner">
-      <h1 class="hero__title">See the <span class="u-highlight">real checkout price</span></h1>
-      <p class="hero__tagline">
-        Not just base fares. SkyDeal runs a <strong>price comparison based on actual bank/UPI/wallet offers</strong>—
-        tailored to the <em>payment methods</em> you can use—so you know which OTA really costs less.
+      <h1 class="hero__title">
+        <span class="t-gradient">Find the best offers across travel portals</span>
+        <span class="hero__subtitle">according to your payment methods</span>
+      </h1>
+
+      <!-- Big beta box -->
+      <div class="announcement" role="status" aria-live="polite">
+        <div class="announcement__label">Private Beta</div>
+        <div class="announcement__text">
+          We’re still building SkyDeal. <strong>Search & booking aren’t enabled</strong> on this site yet.
+          This is a limited preview while we validate the experience.
+        </div>
+      </div>
+
+      <!-- Value props / checklist -->
+      <div class="grid">
+        <div class="card">
+          <div class="check">✓</div>
+          <div class="card__title">Real checkout prices</div>
+          <p class="card__text">We apply <strong>actual bank / UPI / wallet offers</strong> and caps to live fares to show what you’ll really pay.</p>
+        </div>
+        <div class="card">
+          <div class="check">✓</div>
+          <div class="card__title">Payment-method first</div>
+          <p class="card__text">Filter by cards, UPI, wallets or EMI you actually have—see which OTA is best <em>for you</em>.</p>
+        </div>
+        <div class="card">
+          <div class="check">✓</div>
+          <div class="card__title">Transparent breakdown</div>
+          <p class="card__text">Offer math you can audit. No mystery fees, no surprises at checkout.</p>
+        </div>
+        <div class="card">
+          <div class="check">✓</div>
+          <div class="card__title">India-focused</div>
+          <p class="card__text">Built for Indian OTAs, banks and tenders—kept current with live offer terms.</p>
+        </div>
+      </div>
+
+      <p class="contact-note">
+        Have feedback or want early access? <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a>
       </p>
-
-      <div class="hero__cards">
-        <div class="card">
-          <div class="card__title">Offer-aware math</div>
-          <p class="card__text">We apply published offers (cards, UPI, wallets, EMI) to live fares to compute the true pay-at-checkout price.</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Payment-method filters</div>
-          <p class="card__text">Pick the methods you actually have. We’ll surface the best portal after all terms and caps.</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Transparent savings</div>
-          <p class="card__text">See how each price was derived—no mystery math, no surprise fees.</p>
-        </div>
-      </div>
-
-      <div class="hero__note">
-        Booking isn’t available on this site. We’re currently testing our app privately.
-        Questions? <a href="mailto:contact@skydeal.co.in">contact@skydeal.co.in</a>
-      </div>
     </div>
   </section>
 
@@ -73,25 +91,20 @@
   <footer class="site-footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="brand__dot brand__dot--sm"></span>
+        <span class="brand__logo brand__logo--sm" aria-hidden="true"></span>
         <strong>SkyDeal</strong>
       </div>
       <div class="footer__links">
-        <a href="/about.html">About</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="footer__copy">© <span id="y"></span> SkyDeal. All rights reserved.</div>
     </div>
   </footer>
 
   <script>
-    // Dismissible banner + dynamic year
-    document.querySelector(".notice__close")?.addEventListener("click", () => {
-      document.querySelector(".notice")?.classList.add("is-hidden");
-    });
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
